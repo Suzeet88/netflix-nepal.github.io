@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+    color: aliceblue;
+}
+.header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image.png);
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+nav a{
+    text-decoration: none;
+    background-color: red;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+nav a:hover{
+    color: black;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    max-width: 500px;
+}
+.text h1{
+    font-size: 50px;
+}
+.text h3{
+  font-size: 22px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    background-color: aliceblue;
+    max-width: 650px;
+}
+.search input{
+    flex: 1;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.search button{
+    outline: none;
+    border: none;
+    background-color: red;
+    padding: 20px;
+    font-size: 18px;
+    color: aliceblue;
+    transition: 0.5s;
+}
+.search button:hover{
+    color: black;
+}
+/* enjoy section */
+.enjoy{
+    margin: 100px 0;
+}
+.row{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.col-1{
+    flex-basis: 50%;
+}
+.col-1 img{
+    width: 80%;
+}
+.col-1 h1{
+    font-size: 40px;
+}
+.col-1 p{
+    font-size: 20px;
+}
+/* questions section  */
+.faq{
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 18px;
+}
+.faq h2{
+    font-weight: 600;
+    font-size: 40px;
+}
+.accordion{
+     margin: 60px auto;
+     width: 100%;
+     max-width: 750px;
+}
+.accordion li{
+    list-style:none ;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgb(39, 38, 38);
+    margin-bottom: 2px;
+    position: relative;
+    cursor: pointer;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position:absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background-color: rgb(39, 38, 38);
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ,padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label +.content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .search{
+    max-width: 600px;
+    margin: 20px auto 30px;
+}
+.faq small{
+    font-size: 15px;
+}
+/* footer */
+.footer{
+    margin-top: 100px ;
+}
+.fax{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-left: 50px;
+}
+.col-2{
+    flex-basis: 25%;
+    width: 100%;
+}
+.col-2 li{
+     list-style: none;
+     cursor: pointer;
+     transition: 1s;
+}
+.col-2 li:hover{
+    text-decoration: underline;
+}
+#net{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+/* media for this website */
+@media only screen and (max-width:600px){
+    nav img{
+        width: 70px;
+    }
+    nav a{
+        padding: 5px;
+        font-size: 10px;
+    }
+    nav{
+        margin: 0 20px;
+    }
+    .text{
+        max-width: 300px;
+    }
+    .text h1{
+        font-size: 40px;
+        padding: 0 30px;
+    }
+    .text h3{
+        font-size: 18px;
+    }
+    .text p{
+        font-size: 15px;
+        padding: 0 30px;
+    }
+    
+    .search input{
+        padding-left: 10px;
+        font-size: 15px;
+    }
+    .search button{
+        background-color: red;
+        padding: 4px;
+        font-size: 10px;
+        color: aliceblue;
+    }
+    .col-1 {
+        flex-basis: 100%;
+        margin: 0 60px;
+    }
+    .col-1 img{
+        width: 80%;
+    }
+    .col-1 h1{
+        font-size: 30px;
+    }
+    .col-1 p{
+        font-size: 18px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .faq h2{
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .accordion{
+         margin: 60px auto;
+         width: 98%;
+         max-width: 600px;
+    }
+    .faq .search{
+        max-width: 500px;
+        margin: 30px auto 50px;
+        
+    }
+    .faq small{
+        font-size: 20px;
+    }
+    .col-2{
+        flex-basis: 100%;
+        margin: 20px;
+    }
+    .fax{
+        flex-direction: column;
+        margin-right: 30px;
+    }
+    .col-2 li{
+        text-align: center;
+        margin: auto;
+    }
+}
